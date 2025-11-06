@@ -1,69 +1,220 @@
-🧾 Primer borrador del proyecto: GymTrack 🧾
+<div align="center">
 
-1. 💡 Idea del proyecto
+# 🏋️ GymTrack
 
-1.1. Presentación
-El proyecto GymTrack consiste en el desarrollo de una aplicación móvil Android, creada en Java usando Android Studio, destinada a gimnasios o entrenadores personales.
-El objetivo es gestionar los clientes, registrar sus rutinas de entrenamiento y dietas, y permitir un seguimiento personalizado del progreso de cada usuario, todo almacenado de forma local en una base de datos SQL.
-La aplicación permitirá:
+### *Tu compañero definitivo para la gestión de gimnasios*
 
-👥 Administración diferenciada en función de roles de usuario: público, cliente, entrenador/administrador.
-(id, nombre, correo, contraseña, rol)
-📋 Crear perfiles de clientes con datos básicos (nombre, edad, peso, altura, objetivos, etc.).
-🏋️‍♂️ Registrar rutinas de entrenamiento genéricas o personalizadas según las necesidades de cada cliente.
-🥗 Registrar rutinas de entrenamiento personalizadas (ejercicios, series, repeticiones, peso, RIR, etc.).
-📊 Consultar el historial de entrenamientos y dietas de cada cliente.
-📈 Generar resúmenes de progreso y estadísticas por cliente.
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
 
-1.2. Justificación
-Actualmente, muchos gimnasios —especialmente los más pequeños— carecen de herramientas digitales adecuadas para llevar un control detallado de sus clientes.
-La mayoría dependen de hojas de papel o Excel, lo que resulta ineficiente y propenso a errores. En algunos casos, ni siquiera se realiza un seguimiento adecuado de los clientes, afectando la calidad del servicio.
-GymTrack ofrece una solución local, práctica y personalizable, que permite a los entrenadores gestionar fácilmente a sus clientes, mientras que estos pueden visualizar su progreso mediante una interfaz sencilla e intuitiva.
-Desde un punto de vista académico, este proyecto permite demostrar competencias clave del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM):
-Programación en Java orientada a objetos.
-Diseño de interfaces en Android Studio.
-Gestión de bases de datos SQL.
-Operaciones CRUD avanzadas.
-Manejo de datos y lógica de negocio.
+[📱 Características](#-características-principales) • [🎯 Objetivos](#-objetivos-del-proyecto) • [🛠️ Tecnologías](#️-tecnologías-utilizadas) • [👥 Roles](#-sistema-de-roles)
 
-1.3. Objetivos del proyecto
-Desarrollar una aplicación Android que permita gestionar clientes de un gimnasio, registrando y siguiendo sus entrenamientos y dietas, con almacenamiento seguro y persistente mediante SQL.
-Objetivos específicos:
-🧩 Diseñar una interfaz clara y fácil de usar para entrenadores y administradores.
-🗄️ Crear una base de datos SQL con tablas en función de los datos necesarios.
-🔁 Implementar operaciones CRUD sobre esta base de datos.
-🏋️ Permitir asignar rutinas y dietas a cada cliente y registrar su progreso.
-📊 Generar resúmenes de evolución por cliente.
-✅ Validar los datos introducidos para asegurar la integridad de la información.
-📝 Documentar el desarrollo de la aplicación y sus funcionalidades.
+---
 
-| Tecnología         | Uso                                    | Justificación                                                |
-| ------------------ | -------------------------------------- | ------------------------------------------------------------ |
-| **Android Studio** | Entorno de desarrollo de la aplicación | Herramienta completa para crear aplicaciones Android en Java |
-| **Java**           | Lenguaje de programación               | Orientado a objetos y ampliamente usado en Android           |
-| **SQL**            | Base de datos                          | Permite gestionar de manera eficiente los datos de la app    |
-| **XML**            | Diseño de la interfaz                  | Permite crear pantallas claras, adaptables y estructuradas   |
+</div>
 
-1.5. Separación de roles
-Dentro de la aplicación, los usuarios tendrán diferentes roles, cada uno con accesos y funcionalidades específicas:
+## 💡 Sobre el Proyecto
 
-👤 Público o anónimo
-Acceso limitado: puede ver información general, tutoriales o ejemplos de rutinas/dietas.
-No puede crear ni editar clientes, rutinas o dietas.
-Interfaz simplificada.
+**GymTrack** es una aplicación móvil Android diseñada para revolucionar la gestión de gimnasios pequeños y entrenadores personales. Desarrollada en Java con Android Studio, ofrece una solución completa y local para el seguimiento personalizado de clientes, rutinas y progreso físico.
 
-🧑‍💻 Usuario registrado
-Generalmente, un cliente del gimnasio.
-Puede ver sus propias rutinas y dietas asignadas por el entrenador.
-Puede registrar sus progresos y consultar su historial de entrenamientos y comidas.
-Solo puede modificar su propio perfil y datos.
+### 🎯 El Problema
 
-🧑‍🏫 Administrador / Entrenador
-Funcionalidades completas: crear y eliminar clientes, asignar rutinas y dietas, consultar progreso global.
-Puede gestionar todos los registros de usuarios y rutinas.
+La mayoría de gimnasios pequeños dependen de métodos obsoletos:
+- 📄 Hojas de papel dispersas
+- 📊 Excel desorganizado
+- ❌ Falta de seguimiento adecuado
+- 🚫 Información propensa a pérdidas
 
-| Rol                    | Menú / Pantallas disponibles                                   |
-| ---------------------- | -------------------------------------------------------------- |
-| **Público**            | Inicio, Rutinas, Dietas de Ejemplo                             |
-| **Usuario registrado** | Inicio, Mi Perfil, Mis rutinas, Mis dietas, Historial          |
-| **Administrador**      | Inicio, Clientes, Rutinas, Dietas, Estadísticas, Configuración |
+### ✨ La Solución
+
+GymTrack centraliza toda la información en una base de datos SQL local, proporcionando:
+- ✅ Gestión eficiente de clientes
+- ✅ Seguimiento detallado del progreso
+- ✅ Interfaz intuitiva y profesional
+- ✅ Almacenamiento seguro y persistente
+
+---
+
+## 🚀 Características Principales
+
+<table>
+<tr>
+<td width="50%">
+
+### 👥 Gestión de Usuarios
+- Sistema de roles diferenciados
+- Perfiles completos de clientes
+- Autenticación segura
+- Datos personalizados (edad, peso, altura, objetivos)
+
+</td>
+<td width="50%">
+
+### 🏋️‍♂️ Rutinas de Entrenamiento
+- Creación de rutinas genéricas y personalizadas
+- Registro de ejercicios, series y repeticiones
+- Control de peso y RIR
+- Historial completo de entrenamientos
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🥗 Planes Nutricionales
+- Registro de dietas personalizadas
+- Seguimiento de comidas
+- Historial nutricional
+- Adaptación a objetivos individuales
+
+</td>
+<td width="50%">
+
+### 📊 Análisis y Progreso
+- Estadísticas detalladas por cliente
+- Resúmenes de evolución
+- Gráficos de progreso
+- Informes personalizados
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 Objetivos del Proyecto
+
+### Objetivo General
+
+Desarrollar una aplicación Android completa que permita a gimnasios y entrenadores gestionar clientes de manera eficiente, registrando y siguiendo sus entrenamientos y dietas con almacenamiento seguro mediante SQL.
+
+### Objetivos Específicos
+
+| Objetivo | Descripción |
+|----------|-------------|
+| 🧩 **Interfaz Intuitiva** | Diseñar una UI clara y fácil de usar para todos los roles |
+| 🗄️ **Base de Datos Robusta** | Crear estructura SQL optimizada para los datos necesarios |
+| 🔁 **Operaciones CRUD** | Implementar todas las operaciones de gestión de datos |
+| 🏋️ **Asignación Inteligente** | Permitir asignar rutinas y dietas personalizadas |
+| 📊 **Seguimiento Detallado** | Generar resúmenes de evolución por cliente |
+| ✅ **Validación de Datos** | Asegurar la integridad de toda la información |
+| 📝 **Documentación Completa** | Documentar el desarrollo y funcionalidades |
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+<div align="center">
+
+| Tecnología | Propósito | Justificación |
+|:----------:|-----------|---------------|
+| ![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=flat&logo=android-studio&logoColor=white) | **Entorno de Desarrollo** | Herramienta oficial y completa para aplicaciones Android |
+| ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) | **Lenguaje Principal** | POO sólida y ampliamente usado en Android |
+| ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat&logo=sqlite&logoColor=white) | **Base de Datos** | Gestión eficiente y local de datos persistentes |
+| ![XML](https://img.shields.io/badge/XML-FF6600?style=flat&logo=xml&logoColor=white) | **Diseño de UI** | Interfaces claras, estructuradas y adaptables |
+
+</div>
+
+---
+
+## 👥 Sistema de Roles
+
+GymTrack implementa un sistema de roles robusto que diferencia las funcionalidades según el tipo de usuario:
+
+### 🌐 Público / Anónimo
+
+```
+✓ Acceso limitado a información general
+✓ Visualización de rutinas y dietas de ejemplo
+✓ Tutoriales y guías básicas
+✗ Sin capacidad de edición
+✗ Sin acceso a datos personales
+```
+
+**Pantallas disponibles:** `Inicio` • `Rutinas de Ejemplo` • `Dietas de Ejemplo`
+
+---
+
+### 🧑‍💻 Usuario Registrado (Cliente)
+
+```
+✓ Visualización de rutinas y dietas asignadas
+✓ Registro de progresos personales
+✓ Consulta de historial completo
+✓ Edición de perfil propio
+✗ Sin acceso a otros usuarios
+✗ Sin capacidades administrativas
+```
+
+**Pantallas disponibles:** `Inicio` • `Mi Perfil` • `Mis Rutinas` • `Mis Dietas` • `Historial`
+
+---
+
+### 🧑‍🏫 Administrador / Entrenador
+
+```
+✓ Gestión completa de clientes
+✓ Creación y asignación de rutinas
+✓ Diseño de planes nutricionales
+✓ Acceso a estadísticas globales
+✓ Configuración de la aplicación
+✓ Eliminación y modificación de registros
+```
+
+**Pantallas disponibles:** `Inicio` • `Clientes` • `Rutinas` • `Dietas` • `Estadísticas` • `Configuración`
+
+---
+
+## 📋 Justificación Académica
+
+Este proyecto demuestra competencias clave del ciclo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**:
+
+- ✅ Programación en Java orientada a objetos
+- ✅ Diseño de interfaces en Android Studio
+- ✅ Gestión de bases de datos SQL
+- ✅ Operaciones CRUD avanzadas
+- ✅ Manejo de datos y lógica de negocio
+- ✅ Arquitectura de software escalable
+
+---
+
+## 📊 Modelo de Datos
+
+### Entidad Usuario
+```
+• id (clave primaria)
+• nombre
+• correo
+• contraseña (cifrada)
+• rol (público/cliente/administrador)
+```
+
+### Entidad Cliente
+```
+• id (clave primaria)
+• nombre
+• edad
+• peso
+• altura
+• objetivos
+```
+
+*Más entidades para rutinas, dietas, ejercicios y registros de progreso*
+
+---
+
+<div align="center">
+
+## 🎓 Proyecto Académico
+
+Desarrollado como parte del ciclo formativo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**
+
+---
+
+### 💪 GymTrack - Gestión profesional al alcance de tu mano
+
+*Hecho con ❤️ para transformar la gestión de gimnasios*
+
+</di
