@@ -39,7 +39,7 @@ GymTrack centraliza toda la información en una base de datos SQL local, proporc
 
 ## 🚀 Características Principales
 
-<table>
+<table align="center">
 <tr>
 <td width="50%">
 
