@@ -217,4 +217,4 @@ Desarrollado como parte del ciclo formativo de **Desarrollo de Aplicaciones Mult
 
 *Hecho con ❤️ para transformar la gestión de gimnasios*
 
-</di
+</div>
